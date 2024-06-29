@@ -79,13 +79,13 @@ const markupImages = images
             </a>
         </li>`
   )
-  .join(""); // create markup HTML
+  .join("");
 
-galleryList.insertAdjacentHTML("afterbegin", markupImages); // add markup to html
-galleryList.addEventListener("click", selectImage); //choiсe image on click
+galleryList.insertAdjacentHTML("afterbegin", markupImages);
+galleryList.addEventListener("click", selectImage);
 
 function selectImage(event) {
-  event.preventDefault(); //not download images default
+  event.preventDefault();
   if (event.target.nodeName !== "IMG") {
     return;
   }
